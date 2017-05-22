@@ -1,0 +1,96 @@
+﻿@model Cooking.Models.ViewModels.Site.EditorVM
+
+<div class="row">
+        <div class="col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Recipe<span class="pull-right"><a href="/Recipe/@Model.Id/Edit">Edit Recipe</a></span></div>
+                <div class="panel-body">
+                    <div>
+                        <div class="thumbnail">
+                            @if (string.IsNullOrEmpty(Model.ProfilImg))
+                            {
+                                <img class="card-img-top" src="~/Images/NoImage.jpg" alt="Card image cap">
+                            }
+                            else
+                            {
+                                <img class="card-img-top" src="~/Images/Recipe/@Model.DirectoryCUID/@Model.ProfilImg" alt="Card image cap">
+                            }
+                            <div class="card-block">
+                                <h4 class="card-title">@Model.Title</h4>
+                                <p class="card-text">@Model.Description</p>
+                                <span class="label label-info">@Model.Type.Name</span>
+                                <span class="label label-info">@Model.Country</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Products<span class="pull-right"><a href="/Recipe/@Model.Id/AddProduct">Add Product</a></span></div>
+                    <div class="panel-body">
+                        @foreach (var item in Model.Products)
+                        {
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <p>
+                                        <span>@item.Name </span>
+                                        <span>@item.Quantity </span>
+                                        <span>@item.Measure </span>
+                                        <span class="pull-right">
+                                            @Html.RouteLink("Edit", "RoductEdit", new { controller = "Product", action = "EditProduct", recipeid = Model.Id, productid = item.Id })|
+                                            @Html.RouteLink("Delete", "RoductEdit", new { controller = "Product", action = "DeleteProduct", recipeid = Model.Id, productid = item.Id })
+                                        </span>
+                                    </p>
+                                </li>
+                            </ul>
+                        }
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Steps<span class="pull-right"><a href="/Recipe/@Model.Id/AddStep">Add Cooking Step</a></span></div>
+                    <div class="panel-body">
+                        @foreach (var item in Model.Steps)
+                        {
+                            <div class="row">
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="#" class="thumbnail">
+                                        @if (string.IsNullOrEmpty(item.Img))
+                                        {
+                                            <img src="~/Images/NoImage.jpg" alt="...">
+                                        }
+                                        else
+                                        {
+                                            <img src="~/Images/Recipe/@Model.DirectoryCUID/@item.Img" alt="...">
+                                        }
+                                    </a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p>@item.Description</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span class="pull-right">
+                                            @Html.RouteLink("Edit", "CookStepEditDelete", new { controller = "CookSetp", action = "EditCookStep", recipeid = Model.Id, cookStepId = item.Id })|
+                                            @Html.RouteLink("Delete", "CookStepEditDelete", new { controller = "CookSetp", action = "DeleteCookStep", recipeid = Model.Id, cookStepId = item.Id })
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <span class="pull-left">
+                <a href="/Recipe/@Model.Id/Delete" class="btn btn-primary" role="button">Delete Recipe</a>
+            </span>
+            <span class="pull-right">
+                <a href="#" class="btn btn-primary" role="button">Edit Recipe</a>
+            </span>
+        </div>
+    </div>

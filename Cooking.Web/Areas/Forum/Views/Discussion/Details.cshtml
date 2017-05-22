@@ -1,0 +1,32 @@
+﻿@model Cooking.Models.ViewModels.Forum.DiscussonDetailsVm
+@using Cooking.Models.ViewModels.Forum;
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="col-sm-9">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>@Html.DisplayFor(model => model.Title)</h1>
+            <p>@Html.DisplayFor(model => model.Description)</p>
+        </div>
+        <p>@Html.DisplayFor(model => model.DateCreated).</p>
+        <p>Author: @Html.DisplayFor(model => model.User.UserName)</p>
+    </div>
+
+    @foreach (var post in Model.Posts)
+    {
+        <hr>
+        <h2>@post.Title</h2>
+        <h5><span class="glyphicon glyphicon-time"></span> Post by @post.Author, @post.PostDate</h5>
+        <h5><span class="label label-success">Lorem</span></h5>
+        <br>
+        <p>@post.Description</p>
+        <hr>
+    }
+    @Html.Partial("_MakePostPartialView", new PostPartialVM())
+</div>
+
+
+

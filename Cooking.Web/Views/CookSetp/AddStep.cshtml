@@ -1,0 +1,44 @@
+﻿@model Cooking.Models.ViewModels.Site.AddStepVM
+
+<h4>Add new cooking step</h4>
+<hr />
+@using (Html.BeginForm("AddStep", "CookSetp", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="file" name="fileUpload" class="file" style="display: none;">
+                <p>Add image</p>
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control input" disabled placeholder="Upload Image">
+                        <span class="input-group-btn">
+                            <button class="browse btn btn-primary input" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.RecipeId)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @rows = "5" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <span class="pull-left">
+                    <a href="/Recipe/@Model.RecipeId/Editor" class="btn btn-primary" role="button">Cancel</a>
+                </span>
+                <span class="pull-right">
+                    <input type="submit" value="Add" class="btn btn-primary" />
+                </span>
+            </div>
+        </div>
+    </div>
+}

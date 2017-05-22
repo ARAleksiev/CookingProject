@@ -1,0 +1,69 @@
+﻿@model Cooking.Models.ViewModels.Site.NewRecipeVM
+
+<h4>Create main content of your recipe</h4>
+<hr />
+
+@using (Html.BeginForm("New", "Recipe", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="file" name="fileUpload" class="file" style="display: none;">
+                @Html.LabelFor(model => model.ProfilImgGUID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control input" disabled placeholder="Upload Image">
+                        <span class="input-group-btn">
+                            <button class="browse btn btn-primary input" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @rows = "5" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.SelectedTypesId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(m => m.SelectedTypesId, Model.RecTypes, htmlAttributes: new { @class = "btn btn-secondary dropdown-toggle" })
+                        @Html.ValidationMessageFor(m => m.SelectedTypesId)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Country, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(m => m.Country)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <span class="pull-left">
+                        <a href="#" class="btn btn-primary" role="button">Cancel</a>
+                    </span>
+                    <span class="pull-right">
+                        <input type="submit" value="Next" class="btn btn-primary" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<hr />
+

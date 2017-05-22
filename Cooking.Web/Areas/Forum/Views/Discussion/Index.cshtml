@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Cooking.Models.ViewModels.Forum.ForumIndexViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="col-sm-9">
+            <h2>Index</h2>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+
+            @foreach (var item in Model)
+            {
+                <hr>
+                <h2>@Html.ActionLink(item.Title, "Details", new { id = item.Id })</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Created at @item.DateCreated</h5>
+                <a href="#">Comments <span class="badge">@item.PostCount</span></a><br>
+                <br>
+                <p>@item.Title</p>
+                <p>@Html.ActionLink("Details", "Details", new { id = item.Id })</p>
+                <hr>
+            }
+        </div>
+
+
+
