@@ -29,11 +29,18 @@ namespace Cooking.Models.ViewModels.Site
         {
             get { return new SelectList(Types, "Id", "Name"); }
         }
-        [Display(Name = "H:")]
+
+        [RegularExpression("[0-9]{1,}")]
+        [Display(Name = "hours")]
         public int CookingHour { get; set; }
 
-        [Display(Name ="m:")]
+        [Range(0, 59, ErrorMessage = "Can only be between 0 .. 15")]
+        [Display(Name = "minutes")]
         public int CookingMinutes { get; set; }
+
+        [Range(1,50)]
+        [Display(Name = "Serves")]
+        public int Serves { get; set; }
 
     }
 }

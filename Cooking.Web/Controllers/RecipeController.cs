@@ -16,10 +16,12 @@ namespace Cooking.Web.Controllers
     public class RecipeController : Controller
     {
         private RecipeService service;
+
         public RecipeController()
         {
             this.service = new RecipeService();
         }
+
         public ActionResult Index()
         {
             return View();
@@ -115,6 +117,7 @@ namespace Cooking.Web.Controllers
             this.service.RemoveReceptImg(id);
             return RedirectToAction("Edit","Recipe", new { id=id });
         }
+
         [HttpGet]
         [Route("{id:int}/Viewer")]
         public ActionResult Viewer(int id)

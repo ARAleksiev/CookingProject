@@ -18,7 +18,18 @@ namespace Cooking.Models.BindModels.Site
 
         [Required]
         public int SelectedTypesId { get; set; }
+
         public string Country { get; set; }
+
         public HttpPostedFileBase fileUpload { get; set; }
+
+        [Required]
+        public int CookingHour { get; set; }
+
+        [Required]
+        public int CookingMinutes { get; set; }
+
+        [Required]
+        public int Serves { get; set; }
     }
 }

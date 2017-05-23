@@ -20,22 +20,34 @@
         </div>
             
         <div class="col-md-9">
-            <h2>@Model.Title</h2>
+            <div class="row">
+                <h2>@Model.Title</h2>
+            </div>
+            
             <hr />
             <div class="row">@Model.Description</div>
             <hr />
-            <div>
-                <span>Serves: @Model.Serves</span>
-                <span>Cooks in: @Model.CookingHour:@Model.CookingMinutes</span>
+            <div class="row">
+                <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+                    <span>Serves: @Model.Serves </span>
+                </div>
+                
+                <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                    <span>Cooks in: @string.Format("{0}:{1}", Model.CookingHour.ToString("00"), Model.CookingMinutes.ToString("00"))</span>
+                </div>
+
+                <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    <span>Autor: @Model.Author.UserName</span>
+                </div>
+                <div class="col-xs-2">
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    @Html.ActionLink("Favorite","")
+                </div>
             </div>
             <hr />
-            <div>Autor: @Model.Author.UserName</div>
-            <hr />
-            <div>
-                <button type="button" class="btn btn-default">
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Add to Favorite
-                </button>
-            </div>
         </div>
     </div>
     <hr />

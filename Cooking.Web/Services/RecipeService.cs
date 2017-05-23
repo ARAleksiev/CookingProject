@@ -26,7 +26,10 @@ namespace Cooking.Web.Services
                 Title = bind.Title,
                 Type = recipeType,
                 Country = bind.Country,
-                Author = user
+                Author = user,
+                Serves = bind.Serves,
+                CookingHour = bind.CookingHour,
+                CookingMinutes = bind.CookingMinutes
             };
 
             if (fileUpload != null)
