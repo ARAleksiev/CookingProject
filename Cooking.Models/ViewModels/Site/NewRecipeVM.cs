@@ -29,6 +29,11 @@ namespace Cooking.Models.ViewModels.Site
         {
             get { return new SelectList(Types, "Id", "Name"); }
         }
+        [Display(Name = "H:")]
+        public int CookingHour { get; set; }
+
+        [Display(Name ="m:")]
+        public int CookingMinutes { get; set; }
 
     }
 }

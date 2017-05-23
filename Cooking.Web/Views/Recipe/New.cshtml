@@ -54,6 +54,21 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    @Html.Label("COOKS IN", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.LabelFor(m => m.CookingHour, htmlAttributes: new { @class = "control-label col-md-2" })
+                        @Html.EditorFor(model => model.CookingHour, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(m => m.CookingHour)
+
+                        @Html.LabelFor(m => m.CookingMinutes, htmlAttributes: new { @class = "control-label col-md-1" })
+                        @Html.EditorFor(model => model.CookingMinutes, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(m => m.CookingMinutes)
+                    </div>
+                    <div class="col-md-10">
+
+                    </div>
+                </div>
+                <div class="form-group">
                     <span class="pull-left">
                         <a href="#" class="btn btn-primary" role="button">Cancel</a>
                     </span>

@@ -33,3 +33,39 @@ E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\bin\Debug\Auto
 E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.Migrations.InitialCreate.resources
 E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.csproj.GenerateResource.Cache
 E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.Migrations.recUpdate.resources
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Data.dll.config
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Data.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Data.pdb
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\AutoMapper.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Models.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\EntityFramework.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.Mvc.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Microsoft.Owin.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.Razor.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.WebPages.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Owin.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Models.pdb
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Models.dll.config
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\AutoMapper.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\EntityFramework.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.Mvc.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Microsoft.Owin.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.Razor.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.WebPages.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Visual Studio Projects\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.Migrations.InitialCreate.resources
+D:\Visual Studio Projects\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.Migrations.recUpdate.resources
+D:\Visual Studio Projects\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.csproj.GenerateResource.Cache
+D:\Visual Studio Projects\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.dll
+D:\Visual Studio Projects\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.pdb
