@@ -30,5 +30,6 @@ namespace Cooking.Models.EntityModels
         public int Serves { get; set; }
         public int CookingHour { get; set; }
         public int CookingMinutes { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }

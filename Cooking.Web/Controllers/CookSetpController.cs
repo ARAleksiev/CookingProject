@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace Cooking.Web.Controllers
 {
+    [Authorize]
     [RoutePrefix("Recipe/{recipeid:int}")]
     public class CookSetpController : Controller
     {
@@ -64,7 +65,6 @@ namespace Cooking.Web.Controllers
             }
             return RedirectToAction("Editor", "Recipe", new { id = bind.RecipeId });
         }
-
         [HttpPost]
         [Route("EditCookStep/{cookStepId:int}")]
         public ActionResult EditCookStep(CookStepBM bind, int cookStepId)
@@ -80,7 +80,6 @@ namespace Cooking.Web.Controllers
             }
             return View();
         }
-
         [Route("DeleteCookStep/{cookStepId:int}")]
         public ActionResult DeleteCookStep(EditDelCookStep bind)
         {
@@ -91,7 +90,6 @@ namespace Cooking.Web.Controllers
             this.service.DeleteStep(bind);
                 return RedirectToAction("Editor", "Recipe", new { id = bind.RecipeId });
         }
-
         [Route("RemoveCookStepImg/{step:int}")]
         public ActionResult RemoveCookStepImg(int recipeid, int step)
         {

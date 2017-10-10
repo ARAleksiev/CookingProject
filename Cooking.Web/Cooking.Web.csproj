@@ -187,6 +187,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CookingStepService.cs" />
     <Compile Include="Services\ForumService.cs" />
+    <Compile Include="Services\HomeService.cs" />
     <Compile Include="Services\RecipeService.cs" />
     <Compile Include="Services\Service.cs" />
     <Compile Include="Startup.cs" />
@@ -195,6 +196,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Forum\Site.css" />
+    <Content Include="Content\index.view.style.css" />
     <Content Include="Content\sandstone.bootstrap.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\yeti.bootstrap.css" />

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cooking.Models.ViewModels.Site;
+using Cooking.Web.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,15 @@ namespace Cooking.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private HomeService service;
+        public HomeController()
+        {
+            this.service = new HomeService();
+        }
         public ActionResult Index()
         {
-            return View();
+            IndexVM model = this.service.LoadHomePageSliders();
+            return View(model);
         }
 
         public ActionResult About()

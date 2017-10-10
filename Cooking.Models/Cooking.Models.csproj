@@ -136,6 +136,7 @@
     <Compile Include="ViewModels\Site\AddStepVM.cs" />
     <Compile Include="ViewModels\Site\CommentPartialVM.cs" />
     <Compile Include="ViewModels\Site\EditorVM.cs" />
+    <Compile Include="ViewModels\Site\IndexVM.cs" />
     <Compile Include="ViewModels\Site\MakeCommentBM.cs" />
     <Compile Include="ViewModels\Site\ProductVM.cs" />
     <Compile Include="ViewModels\Site\RecipeTypeVM.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="ViewModels\Account\ResetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\SendCodeViewModel.cs" />
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\Site\SliderVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

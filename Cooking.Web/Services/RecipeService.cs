@@ -19,7 +19,6 @@ namespace Cooking.Web.Services
             
             var user = Context.Users.FirstOrDefault(u => u.Id == userId);
             var recipeType = this.Context.ReceptTypes.FirstOrDefault(rt=>rt.Id == bind.SelectedTypesId);
-
             Recipe recipe = new Recipe()
             {
                 Description = bind.Description,
@@ -29,27 +28,23 @@ namespace Cooking.Web.Services
                 Author = user,
                 Serves = bind.Serves,
                 CookingHour = bind.CookingHour,
-                CookingMinutes = bind.CookingMinutes
+                CookingMinutes = bind.CookingMinutes,
+                CreateDate = DateTime.Now
             };
-
             if (fileUpload != null)
             {
                 this.SaveImgInFileSystem(fileUpload, recipe);
             }
-
             this.Context.Recipes.Add(recipe);
             this.Context.SaveChanges();
-
             return recipe.Id;
         }
-
         internal IEnumerable<RecipeTypeVM> GetRecipeTypes()
         {
             IEnumerable<ReceptType> types = this.Context.ReceptTypes;
             IEnumerable<RecipeTypeVM> vm = Mapper.Instance.Map<IEnumerable<ReceptType>,
                                                                       IEnumerable<RecipeTypeVM>>(types);
             return vm;
-          
         }
         private void SaveImgInFileSystem(HttpPostedFileBase fileUpload, Recipe recipe)
         {
@@ -61,7 +56,6 @@ namespace Cooking.Web.Services
             recipe.DirectoryCUID = dirGUID;
             recipe.ProfilImg = fileName;
         }
-
         internal void DeleteRecipe(int id)
         {
             var rec = this.Context.Recipes.FirstOrDefault(r=>r.Id==id);
@@ -71,7 +65,6 @@ namespace Cooking.Web.Services
                 this.Context.SaveChanges();
             }
         }
-
         internal NewRecipeVM RecipeToNewEditVM(int id)
         {
             var rec = this.Context.Recipes.FirstOrDefault(r=>r.Id==id);
@@ -112,10 +105,8 @@ namespace Cooking.Web.Services
         {
             return this.Context.Recipes.FirstOrDefault(r=>r.Id == id);
         }
-
         internal void RemoveReceptImg(int id)
         {
-
             var recipe = this.Context.Recipes.FirstOrDefault(r=>r.Id==id);
             var path = Path.Combine(HttpContext.Current.Server.MapPath("~/Images/Recipe/" + recipe.DirectoryCUID), recipe.ProfilImg);
             if (File.Exists(path))
@@ -127,8 +118,6 @@ namespace Cooking.Web.Services
                 recipe.ProfilImg = string.Empty;
                 this.Context.SaveChanges();
             }
-
-
         }
 
         internal void AddCommentToRecipe(MakeCommentBM bind, string userId)
@@ -145,7 +134,6 @@ namespace Cooking.Web.Services
             rec.Comments.Add(comment);
             this.Context.SaveChanges();
         }
-
         internal EditorVM GetRecipe(int id)
         {
             Recipe recipe = this.Context.Recipes.FirstOrDefault(r=>r.Id == id);
@@ -154,7 +142,6 @@ namespace Cooking.Web.Services
             {
                 vm = Mapper.Instance.Map<Recipe, EditorVM>(recipe);
             }
-            
             return vm;
         }
 
@@ -197,12 +184,9 @@ namespace Cooking.Web.Services
                 product.Name = model.Name;
                 product.Quantity = model.Quantity;
                 product.Measure = measures.ToString();
-
                 this.Context.SaveChanges();
             }
-
         }
-
         internal void DeleteProduct(EditDelProductBM bind)
         {
             var product = 

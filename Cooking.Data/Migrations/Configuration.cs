@@ -10,8 +10,7 @@ namespace Cooking.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "Cooking.Data.CoockingDBContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Cooking.Data.CoockingDBContext context)

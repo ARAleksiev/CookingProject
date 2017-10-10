@@ -64,14 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoockingDBContext.cs" />
-    <Compile Include="Migrations\201705010910163_InitialCreate.cs" />
-    <Compile Include="Migrations\201705010910163_InitialCreate.Designer.cs">
-      <DependentUpon>201705010910163_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705041829407_recUpdate.cs" />
-    <Compile Include="Migrations\201705041829407_recUpdate.Designer.cs">
-      <DependentUpon>201705041829407_recUpdate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,14 +76,6 @@
       <Project>{de2f7698-2155-42cd-9f56-cb8e7f42a8d0}</Project>
       <Name>Cooking.Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705010910163_InitialCreate.resx">
-      <DependentUpon>201705010910163_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705041829407_recUpdate.resx">
-      <DependentUpon>201705041829407_recUpdate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

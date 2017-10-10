@@ -12,6 +12,7 @@ using System.Web.Mvc;
 
 namespace Cooking.Web.Controllers
 {
+    [Authorize]
     [RoutePrefix("Recipe")]
     public class RecipeController : Controller
     {
@@ -145,6 +146,5 @@ namespace Cooking.Web.Controllers
             }
             return RedirectToAction("Viewer", "Recipe", new { id = bind.Id });
         }
-
     }
 }

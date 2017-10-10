@@ -30,9 +30,6 @@ E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\bin\Debug\Owin
 E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\bin\Debug\Microsoft.Owin.xml
 E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\bin\Debug\AutoMapper.dll
 E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\bin\Debug\AutoMapper.xml
-E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.Migrations.InitialCreate.resources
-E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.csproj.GenerateResource.Cache
-E:\SoftUni\C# MVC Frameworks  ASP.NET\CookingProject\Cooking.Data\obj\Debug\Cooking.Data.Migrations.recUpdate.resources
 D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Data.dll.config
 D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Data.dll
 D:\Visual Studio Projects\CookingProject\Cooking.Data\bin\Debug\Cooking.Data.pdb
